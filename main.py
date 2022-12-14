@@ -2,15 +2,15 @@ import hashlib
 wlist=input("wordlist: ")
 hash2crack=input("hash: ")
 
-wlistlines=open(wlist,"r").readlines()
+rainbow =open(wlist,"r").readlines()
 #print(wlistlines)
 
 
-for i in range(0,len(wlistlines)):
-    hash2comp=hashlib.md5(wlistlines[i].replace("\n","").encode()).hexdigest()
+for i in range(0,len(rainbow)):
+    hash2comp=hashlib.md5(rainbow[i].replace("\n","").encode()).hexdigest()
 
     if(hash2crack==hash2comp):
-        print("password found: "+wlistlines[i].replace("\n"," "))
+        print("password found: "+rainbow[i].replace("\n"," "))
         exit()
 
 
